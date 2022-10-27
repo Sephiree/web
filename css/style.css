@@ -5,8 +5,9 @@
 }
 
 body {
-    background: #b29adf;
+    background: #d4d4d4;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -200,12 +201,13 @@ nav {
 /*cards*/
 
 .container {
-    margin: 8px;
+    margin: 1em 2em 2em 4em;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 4%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: space-evenly;
+    gap: 2%;
 }
 
 .card {
@@ -217,7 +219,7 @@ nav {
 
 .card:hover {
     filter: none;
-    transition: 0.8s;
+    transition: ease-in 0.8s;
     transition-duration: 0.5s;
 }
 
@@ -345,8 +347,9 @@ nav {
 /*weapons*/
 
 .container-wp {
+    margin-left: 2%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .card-wp {
@@ -359,6 +362,11 @@ nav {
 .card-wp img {
     width: 100%;
     object-fit: fill;
+}
+
+#alternator {
+    width: 66%;
+    margin-left: 3em;
 }
 
 .card-title-wp {
