@@ -29,7 +29,6 @@ h2 {
     font-family: Times, 'Times New Roman', serif;
     color: #fff;
     text-shadow: 0px 1px 14px rgba(36, 36, 36, 0.3);
-    grid-area: titlewp;
 }
 
 h3 {
@@ -121,6 +120,11 @@ nav {
         flex-wrap: wrap;
     }
 
+    .container{
+        grid-template-columns: repeat(4, minmax(400px, 200px));
+        gap: 1%;
+    }
+
 }
 
 /*mobile menu*/
@@ -141,6 +145,7 @@ nav {
         align-items: center;
         width: 50%;
         transform: translateX(100%);
+        visibility: hidden;
     }
 
     .nav-links li {
@@ -202,12 +207,10 @@ nav {
 
 .container {
     margin: 1em 2em 2em 4em;
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(400px, 1fr));
     grid-template-rows: repeat(5, 1fr);
-    justify-content: space-evenly;
-    gap: 2%;
+    gap: 1%;
 }
 
 .card {
@@ -232,7 +235,7 @@ nav {
 }
 
 .card img{   
-    display: block; 
+    
     min-width: 200px;
     min-height: 400px;
     width: 280px;
@@ -388,6 +391,8 @@ nav {
 .season {
     display: block;
     padding: 1.2%;
+    justify-content: center;
+    align-items: center;
 }
 
 .season img{
