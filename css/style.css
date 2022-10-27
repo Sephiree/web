@@ -8,6 +8,7 @@ body {
     background: #d4d4d4;
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -88,9 +89,13 @@ nav {
 .nav-links li:hover{
     background-color:rgba(22, 22, 22, 0.7);
     padding: 5px 15px 5px 15px;
-    transform: scale(110%);
+    transform: scale(108%);
     transition-duration: 0.76s;
     
+}
+
+.nav-links li::after{
+    background-color: #010101;
 }
 
 .nav-links a{
@@ -113,18 +118,13 @@ nav {
 
 @media screen and (max-width: 1280px){
     .nav-links {
+        position: absolute;
         width: 40%;
         font-size: 1em;
         padding: 20px;
         display: flex;
         flex-wrap: wrap;
     }
-
-    .container{
-        grid-template-columns: repeat(4, minmax(400px, 200px));
-        gap: 1%;
-    }
-
 }
 
 /*mobile menu*/
@@ -206,14 +206,14 @@ nav {
 /*cards*/
 
 .container {
-    margin: 1em 2em 2em 4em;
+    margin: 2em;
     display: grid;
-    grid-template-columns: repeat(4, minmax(400px, 1fr));
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat( 4, minmax(420px, 1fr));
     gap: 1%;
 }
 
 .card {
+    margin: 1em;
     position: relative;
     height: 600px;
     width: 300px;
@@ -349,10 +349,10 @@ nav {
 
 /*weapons*/
 
-.container-wp {
+.container-fluid {
     margin-left: 2%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr)
 }
 
 .card-wp {
